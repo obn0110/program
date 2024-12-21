@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0652e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            height: 100vh;
+        }
+ 
+
+        .signup-container {
+          
+            padding: 20px 30px;
+            
+    
+            width: 300px;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .signup-btn {
+            width: 100px;
+            padding: 10px;
+            margin-left: 110px;
+            background-color: #ff000d;
+            color: rgb(10, 10, 10);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signup-btn:hover {
+            background-color: #03b329;
+        }
+
+        .error-message {
+            color: rgb(17, 17, 17);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2><U>Sign Up</U></h2>
+        <div id="error-message" class="error-message"></div>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            
+                <button type="submit" class="signup-btn" >Sign Up</button>
+            
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            errorMessage.textContent = '';
+
+            if (!username || !phone || !email || !password) {
+                errorMessage.textContent = 'All fields are required.';
+                return;
+            }
+
+            if (!/^[0-9]{10}$/.test(phone)) {
+                errorMessage.textContent = 'Phone number must be 10 digits.';
+                return;
+            }
+
+            if (password.length < 6) {
+                errorMessage.textContent = 'Password must be at least 6 characters long.';
+                return;
+            }
+
+            alert('Sign up successful!');
+            window.location.href='food.html'
+            // Perform further actions such as sending the data to a server.
+            localStorage.setItem('username',username);
+            localStorage.setItem('phone',phone);
+            localStorage.setItem('email',email);
+        });
+    </script>
+</body>
+</html>

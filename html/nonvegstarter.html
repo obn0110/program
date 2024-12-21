@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Veg Starter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .navbar {
+    box-shadow: 37px -42px 10px 37px #aaa;  
+    position:sticky;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    z-index: 12;
+    cursor: pointer;
+    
+}
+.navbar2{
+   width: 150px;
+   height: 100%;
+   overflow: hidden;
+   object-fit: cover;
+}
+#image{
+  width: 100%;
+  margin-top: -17%;
+}
+.searchbar{
+    padding: 10px;
+}
+input{
+    height: 25px;
+    width: 250px;
+    border-bottom: 3px solid orange;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.menu{
+  display: flex;
+
+    height: 50px;
+    width: 300px;
+    gap:40px;
+    
+    margin-left: 600px;
+}
+
+.deal{
+    display: flex;
+    gap: 3px;
+    margin-top: 12px;
+    font-family: sans-serif;
+}
+#deal{
+    height: 20px;
+    width: 20px;
+}
+.cart{
+  display: flex;
+  gap: 3px;
+  margin-top: 12px;
+  font-family: sans-serif;
+}
+.user{
+  display: flex;
+  gap: 3px;
+  margin-top: 12px;
+  font-family: sans-serif;
+}
+ .menu div:hover{
+     color: orange;
+}
+
+        .main{
+            width: 100%;
+            display:block;
+            
+            
+        }
+        .main2{
+            /* border: 1px solid black; */
+            height: 500px;
+            width: 100%;
+            display:flex;
+            gap: 50px;
+            
+        }
+        .main2 div{
+            /* border: 2px solid black; */
+            height: 350px;
+            width: 300px;
+            margin-top: 30px;
+            margin-left: 90px;
+            border-radius: 0 0 10px 10px;
+             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+        }
+        .main3{
+            /* border: 1px solid black; */
+            height: 500px;
+            width: 100%;
+            display:flex;
+            gap: 50px;
+            
+        }
+        .main3 div{
+            /* border: 2px solid black; */
+            height: 400px;
+            width: 300px;
+            margin-top: 30px;
+            margin-left: 90px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+        }
+        .main4{
+            /* border: 1px solid black; */
+            height: 500px;
+            width: 100%;
+            display:flex;
+            gap: 50px;
+            
+        }
+        .main4 div{
+            /* border: 1px solid black; */
+            height: 400px;
+            width: 300px;
+            margin-top: 30px;
+            margin-left: 90px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+         }
+        .main img{
+            width: 99.99%;
+            height: 180px;
+            
+        }
+        .main #p{
+            padding-top: 5px;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        .main #p2{
+            padding-top: 10px;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+        .main #p3{
+            padding-left: 15px;
+            padding-top: 10px;
+            font-size: 20px;
+
+        }
+        .main2 p img{
+            height: 15px;
+            width: 15px;
+        }
+        .main3 p img{
+            height: 15px;
+            width: 15px;
+        }
+        .main4 p img{
+            height: 15px;
+            width: 15px;
+        }
+        .downfoot{
+  border: 1px solid black;
+  height: 400px;
+  width: 100%;
+  display:block;
+  background-color: #000;
+}
+.blank2{
+  /* border: 1px dotted wheat; */
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.blank2 div{
+  /* border: 1px solid black; */
+  height: 250px;
+  width: 150px;
+  color: rgb(253, 252, 252);  
+}
+.blank2 a{
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+  padding: 2px 5px 2px 10px;
+  border: 1px solid black;
+}
+.blank2 a:hover{
+  border-left: 2px solid white;
+  color: #ff9529;
+  
+}
+.follow i:hover{
+ 
+    animation: blink 2s ease infinite;
+}
+@keyframes blink{
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+  }
+.downfoot .blank2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button{
+margin-left: 210PX;
+color: orange;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar2">
+                <img src="img.jpg" alt="omino" id="image">
+            </div>
+            <div class="searchbar">
+                <i class="fa-solid fa-location-dot"></i>
+                <input placeholder="enter delivery address">
+            </div>
+            <div class="menu">
+                <div class="deal">
+
+                    <i class="fa-solid fa-tags"></i>
+                    <p>Deal</p>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>cart</p>
+                </div>
+                <div class="user">
+                    <i class="fa-sharp fa-solid fa-circle-user"></i>
+                    <p>sign in</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="main">
+        <div class="main2">
+            <div class="one">
+                <img src="ns1.jpg" alt=".">
+                <p id="p"><img src="symbol1.png" alt=""> 
+                    Tandoori Chicken Fiery Wings </p>
+                <p id="p2">Our love for chicken wings & everything tandoori comes alive! The desi in you cannot resist this fusion. Wanna bet?</p>
+                <p id="p3"><b>₹ 129</b></p>
+                <button>add to cart</button>
+            </div>
+            <div class="two">
+                <img src="ns2.jpg" alt=".">
+                <p id="p"><img src="symbol1.png" alt=""> 
+                    Very Peri Chicken Wings 
+                    </p>
+                <p id="p2">Tender & juicy chicken wings marinated & tossed with the all-time-favorite Peri Peri sauce. Grilled to perfection for you!</p>
+                <p id="p3"><b>₹ 129</b></p>
+                <button>add to cart</button>
+            </div>
+            <div class="three">
+                <img src="ns3.jpg" alt=".">
+                <p id="p"><img src="symbol1.png" alt=""> 
+                    Pepper Garlic Chicken Wings </p>
+                <p id="p2">Grilled in a heavenly garlic & herb glaze, these chicken wings are finger lickin' good!</p>
+                <p id="p3"><b>₹ 129</b></p>
+                <button>add to cart</button>
+            </div>
+        </div>
+        <div class="main3">
+            <div class="four">
+                <img src="ns4.jpg" alt="">
+                <p id="p"><img src="symbol1.png" alt="">Teekha Meetha Chicken Wings</p>
+                <p id="p2">Tender chicken wings simmered in hot & sweet sauce. It's perfect for your anytime hunger! Ready to lick your fingers?</p>
+                <p id="p3"><b>₹ 135</b></p>
+                <button>add to cart</button>
+            </div>
+            <div class="five">
+                <img src="ns5.jpg" alt="">
+                <p id="p"><img src="symbol1.png" alt=""> Peri Peri Chicken Tangdi</p>
+                <p id="p2">Get ready for Chicken Tangdi with a masaledar twist! Succulent Chicken Tangdi coated with peri peri marinade & grilled on a desi tandoor.</p>
+                <p id="p3"><b>₹ 135</b></p>
+                <button>add to cart</button>
+            </div>
+            <div class="six">
+                <img src="ns6.jpg" alt="">
+                <p id="p"><img src="symbol1.png" alt=""> Classic Chicken Tikka [Boneless]</p>
+                <p id="p2">Melt-in-mouth boneless chicken chunks marinated & grilled traditionally in a tandoor. This timeless classic will cause major drools!</p>
+                <p id="p3"><b>₹ 145</b></p>
+                <button>add to cart</button>
+            </div>
+            
+    </div>
+    <div class="main4">
+        <div class="seven">
+            <img src="ns7.jpg" alt="">
+            <p id="p"><img src="symbol1.png" alt=""> Grilled BBQ Chicken [Boneless]</p>
+            <p id="p2">Soft & succulent chicken chunks in a flavoursome BBQ marinade, grilled perfectly.</p>
+            <p id="p3"><b>₹ 155</b></p>
+            <button>add to cart</button>
+        </div>
+        <div class="eight">
+            <img src="ns8.jpg" alt="">
+            <p id="p"><img src="symbol1.png" alt=""> 
+                Chicken Kalimiri Tikka [Boneless]</p>
+            <p id="p2">Tender chicken chunks in a creamy marinade with black pepper & herbs. Get the feast started!</p>
+            <p id="p3"><b>₹ 145</b></p>
+            <button>add to cart</button>
+        </div>
+        <div class="nine">
+            <img src="ns9.jpg" alt="">
+            <p id="p"><img src="symbol1.png" alt=""> Chicken Malai Kalimiri Tikka</p>
+            <p id="p2">Tender boneless chicken in a marinade of yogurt + cashews + black pepper, grilled to perfection. Aromatic, delicious & too hard to resist!</p>
+            <p id="p3"><b>₹ 155</b></p>
+            <button>add to cart</button>
+        </div>
+        
+</div>
+    <div class="downfoot">
+        <div class="blank2">
+            <div class="contact">
+                <b>OMINO</b><br><br><br>
+                <a href="aboutpage.html" target="_blank">ABOUT US</a><br>
+                <a href="contactpage.html" target="_blank">CONTACT US</a><br>
+                <a href="">DELIVERY POLICIES</a><br>
+                <a href="">PRIVACY POLICIES</a>
+            </div>
+            <div class="explore">
+                <b>EXPLORE</b><br><br><br>
+                <a href="">OFFERS</a><br>
+                <a href="">BLOG</a><br>
+                <a href="">DISCLAIMERS</a><br>
+                <a href="">REFFER &B EARN</a>
+            </div>
+            <div class="follow">
+                <b>FOLLOW</b><br><br><br>
+                <i class="fa-brands fa-facebook"></i><br><br>
+                <i class="fa-brands fa-square-instagram"></i><br><br>
+                <i class="fa-brands fa-square-whatsapp"></i><br><br>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

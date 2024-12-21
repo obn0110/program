@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comfort meals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+        }
+        .navbar {
+    box-shadow: 37px -42px 10px 37px #aaa;  
+    position:sticky;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    z-index: 12;
+    cursor: pointer;
+    
+}
+.navbar2{
+   width: 150px;
+   height: 100%;
+   overflow: hidden;
+   object-fit: cover;
+}
+#image{
+  width: 100%;
+  margin-top: -17%;
+}
+.searchbar{
+    padding: 10px;
+}
+input{
+    height: 25px;
+    width: 250px;
+    border-bottom: 3px solid orange;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.menu{
+  display: flex;
+
+    height: 50px;
+    width: 300px;
+    gap:40px;
+    
+    margin-left: 600px;
+}
+
+.deal{
+    display: flex;
+    gap: 3px;
+    margin-top: 12px;
+    font-family: sans-serif;
+}
+#deal{
+    height: 20px;
+    width: 20px;
+}
+.cart{
+  display: flex;
+  gap: 3px;
+  margin-top: 12px;
+  font-family: sans-serif;
+}
+.user{
+  display: flex;
+  gap: 3px;
+  margin-top: 12px;
+  font-family: sans-serif;
+}
+ .menu div:hover{
+     color: orange;
+}
+        .main{
+        /* border: 1px solid black; */
+        height: 500px;
+        width: 100%;
+        display:flex;
+        gap: 50px;
+        
+    }
+    .main div{
+        /* border: 2px solid black; */
+        height: 410px;
+        width: 300px;
+        margin-top: 30px;
+        margin-left: 90px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+    }
+    .main img{
+            width: 99.99%;
+            height: 200px;
+            
+        }
+        .main #p{
+            padding-top: 1px;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        .main #p2{
+            padding-top: 1px;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+        .main #p3{
+            padding-left: 15px;
+            padding-top: 1px;
+            font-size: 20px;
+
+        }
+        .main p img{
+            height: 15px;
+            width: 15px;
+        }
+        .downfoot{
+  border: 1px solid black;
+  height: 400px;
+  width: 100%;
+  display:block;
+  background-color: #000;
+}
+.blank2{
+  /* border: 1px dotted wheat; */
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.blank2 div{
+  /* border: 1px solid black; */
+  height: 250px;
+  width: 150px;
+  color: rgb(253, 252, 252);  
+}
+.blank2 a{
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+  padding: 2px 5px 2px 10px;
+  border: 1px solid black;
+}
+.blank2 a:hover{
+  border-left: 2px solid white;
+  color: #ff9529;
+  
+}
+.follow i:hover{
+ 
+    animation: blink 2s ease infinite;
+}
+@keyframes blink{
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+  }
+.downfoot .blank2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+margin-left: 210PX;
+color: orange;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar2">
+                <img src="img.jpg" alt="omino" id="image">
+            </div>
+            <div class="searchbar">
+                <i class="fa-solid fa-location-dot"></i>
+                <input placeholder="enter delivery address">
+            </div>
+            <div class="menu">
+                <div class="deal">
+
+                    <i class="fa-solid fa-tags"></i>
+                    <p>Deal</p>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="cart.html" style="text-decoration: none;">cart</a>
+                </div>
+                <div class="user">
+                    <i class="fa-sharp fa-solid fa-circle-user"></i>
+                    <p><a id="user" href="user.html" style="text-decoration: none;"></a></p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="main">
+        <div class="one">
+            <img src="c1.jpg" alt="">
+            <p id="p"><img src="symbol.png" alt=""> Pav Bhaji [sreve 1]</p>
+            <p id="p2">Bombay-style bhaji made with fresh vegetables & flavorful spices + 2 Pavs [4 Pc] + Onions</p>
+            <p id="p3">₹ 50</p>
+            <button onclick="addtocart('pav bhaji',50)">add to cart</button>
+        </div>
+        <div class="two">
+            <img src="c2.jpg" alt="">
+            <p id="p"><img src="symbol.png" alt=""> kadhi khichdi [serve 1]</p>
+            <p id="p2">Chilka moong dal khichdi made in ghee + Tangy kadhi pakoda + Hari Chutney + Onions.</p>
+            <p id="p3">₹ 70</p>
+            <button  onclick="addtocart('kadhi khichdi',70)">add to cart</button>
+        </div>
+        <div class="three">
+            <img src="c3.jpg" alt="">
+            <p id="p"><img src="symbol.png" alt=""> lunch special</p>
+            <p id="p2"> mix of fruits,vegetables,roti,rice,curd and onion which is good for health.</p>
+            <p id="p3">₹ 99</p>
+            <button  onclick="addtocart('lunch special',99)">add to cart</button>
+        </div>
+    </div>
+    <div class="downfoot">
+        <div class="blank2">
+            <div class="contact">
+                <b>OMINO</b><br><br><br>
+                <a href="aboutpage.html" target="_blank">ABOUT US</a><br>
+                <a href="contactpage.html" target="_blank">CONTACT US</a><br>
+                <a href="">DELIVERY POLICIES</a><br>
+                <a href="">PRIVACY POLICIES</a>
+            </div>
+            <div class="explore">
+                <b>EXPLORE</b><br><br><br>
+                <a href="">OFFERS</a><br>
+                <a href="">BLOG</a><br>
+                <a href="">DISCLAIMERS</a><br>
+                <a href="">REFFER &B EARN</a>
+            </div>
+            <div class="follow">
+                <b>FOLLOW</b><br><br><br>
+                <i class="fa-brands fa-facebook"></i><br><br>
+                <i class="fa-brands fa-square-instagram"></i><br><br>
+                <i class="fa-brands fa-square-whatsapp"></i><br><br>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+        </div>
+    </div>
+    <script>
+   const username = localStorage.getItem('username');
+         document.querySelector('#user').textContent= username;
+        function addtocart(itemName, price) {
+            let cart = JSON.parse(localStorage.getItem("cart"))
+          // Add the item to the cart array
+          console.log(cart);
+          cart.push({ name: itemName, price: price });
+        
+          // Display cart items in the console for testing
+      
+          localStorage.setItem('cart',JSON.stringify(cart));
+        
+          // Optional: Show confirmation to the user
+      alert('item added successfully..........');
+        }
+        
+            </script>
+</body>
+</html>

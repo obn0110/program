@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        #cart div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cart"></div>
+    <button id="clearCartButton">Clear cart</button>
+
+    <script>
+        // Fetch cart data from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || []; // Use an empty array if no cart data exists
+
+        // Function to Display the Cart
+        function displayCart() {
+            let cartContainer = document.getElementById('cart');
+            cartContainer.innerHTML = ''; // Clear the cart display
+            
+            if (cart.length === 0) {
+                cartContainer.innerHTML = "Your Cart is Empty";
+                return;
+            }
+
+            let total = 0;
+            cart.forEach((item) => {
+                let itemElement = document.createElement('div');
+                itemElement.innerText = `${item.name} - ${item.price}`;
+                cartContainer.appendChild(itemElement);
+                total += item.price;
+            });
+
+            // Display Total
+            let totalElement = document.createElement('div');
+            totalElement.innerText = `Total: ${total}`;
+            cartContainer.appendChild(totalElement);
+        }
+
+        // Display the cart on page load
+        displayCart();
+
+        // Clear Cart Button Functionality
+        const clearCartButton = document.getElementById('clearCartButton');
+        clearCartButton.addEventListener('click', () => {
+            // Clear the localStorage
+            localStorage.removeItem('cart');
+
+            // Clear the cart array and update the display
+            cart = [];
+            displayCart();
+
+            alert('Cart cleared!');
+        });
+    </script>
+</body>
+</html>

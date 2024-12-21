@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+      
+       <p id="p1"></p>
+       <p id="p2"></p>
+       <p id="p3"></p>
+    <script>
+        let userData = {};
+
+// document.addEventListener('DOMcontentloaded', function () {
+   
+
+    // Get user input
+    const username = localStorage.getItem('username');
+    const email = localStorage.getItem('email');
+    const phone = localStorage.getItem('phone');
+    // Save to a variable
+    userData = { username, email , phone };
+
+    document.querySelector('#p1').innerHTML=userData.username;
+    document.querySelector('#p2').innerHTML=userData.email;
+    document.querySelector('#p3').innerHTML=userData.phone;
+   
+// });
+
+// Display data on another page (assuming the same JavaScript runs)
+
+
+    </script>
+</body>
+</html>
